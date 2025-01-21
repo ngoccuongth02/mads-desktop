@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .primary-button {
+        @apply flex justify-center relative rounded-[36px] leading-[28px] px-[27px] py-[15px] h-[50px] items-center gap-[16px] text-[16px] font-semibold text-white;
+    }
+    .title-1 {
+        @apply text-[#3A7364] font-bold leading-[40px] text-[34px];
+    }
+    .title-2 {
+        @apply text-[#3A7364] font-bold leading-[24px] text-[20px];
+    }
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .box-role-item {
+        @apply w-[180px] h-[180px] flex-center bg-[#fff] rounded-[10px] cursor-pointer border-[#fff] border-[3px] hover:border-[#1EC28B] transition-all duration-300;
+    }
+    .input {
+        @apply h-[56px] bg-[#fff] rounded-[30px] border-[#fff] px-[20px] text-[16px] font-regular w-full text-[#333333];
+    }
+}
+
+@layer base {
+    #root {
+        @apply h-full;
+    }
+
+    html,
+    body {
+        @apply h-full;
+
+        @apply select-none;
+
+        @apply bg-transparent;
+
+        /* @apply font-semibold antialiased text-white; */
+
+        @apply overflow-hidden;
+    }
+
+    header {
+        -webkit-app-region: drag;
+    }
+
+    button {
+        -webkit-app-region: no-drag;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-[#555] rounded-md;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+}

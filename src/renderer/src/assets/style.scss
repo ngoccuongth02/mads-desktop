@@ -1,0 +1,91 @@
+.primary-button {
+    transition: opacity 0.3s linear;
+    &:hover {
+        background: linear-gradient(145deg, #51f0ba, #1ec28b) !important;
+        box-shadow:
+            5px 5px 15px #d1f5e8,
+            -5px -5px 15px #ffffff;
+        color: #fff !important;
+    }
+}
+
+.box-role-item {
+    -webkit-box-shadow: -7px -1px 60px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: -7px -1px 60px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: -7px -1px 60px 0px rgba(0, 0, 0, 0.24);
+}
+
+.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
+    background: linear-gradient(145deg, #51f0ba, #1ec28b) !important;
+}
+.rs-calendar-table-cell-content {
+    height: 55px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 40px;
+    }
+}
+
+.rs-calendar-panel .rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+    border: 1px solid #1ec28b !important;
+    border-radius: 50% !important;
+    .rs-calendar-table-cell-day {
+        background: linear-gradient(145deg, #51f0ba, #1ec28b) !important;
+        border-radius: 50% !important;
+        color: #fff !important;
+    }
+}
+
+.rs-calendar-table-header-cell {
+    color: #3a7364 !important;
+    font-family: 'semibold' !important;
+    text-transform: uppercase !important;
+}
+
+.rs-calendar-header-title {
+    font-family: 'semibold' !important;
+    color: #3a7364 !important;
+    font-size: 24px !important;
+}
+
+//custom SelectPicker
+.rs-picker-default .rs-picker-toggle.rs-btn {
+    height: 56px;
+    padding: 16px 10px 10px 32px;
+    border-radius: 40px;
+    border: 1px solid #a2c1c1;
+    font-size: 16px;
+    font-family: 'semibold';
+}
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value,
+.rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+    color: #a2c1c1;
+    font-size: 16px;
+    font-family: 'semibold';
+}
+.rs-picker-toggle .rs-picker-toggle-placeholder {
+    color: #a2c1c1;
+    font-size: 16px;
+    font-family: 'semibold';
+}
+
+.rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-indicator .rs-picker-caret-icon,
+.rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-indicator .rs-picker-clean {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle:hover {
+    border-color: #1ec28b;
+}
+.rs-picker-select-menu-item {
+    font-family: 'semibold' !important;
+    color: #a2c1c1;
+    font-size: 16px;
+}
