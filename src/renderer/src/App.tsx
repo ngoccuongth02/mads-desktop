@@ -67,7 +67,12 @@ function App() {
         }
     }, [path]);
 
-    return user ? <MenuLayout>{renderPage}</MenuLayout> : <>{renderPageNoLayout}</>;
+    // return user ? <MenuLayout>{renderPage}</MenuLayout> : <>{renderPageNoLayout}</>;
+    return (
+        <MenuLayout>
+            <Home />
+        </MenuLayout>
+    );
 }
 
 export default App;
