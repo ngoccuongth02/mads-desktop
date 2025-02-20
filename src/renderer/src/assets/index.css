@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .primary-button {
+        @apply flex justify-center relative rounded-[36px] leading-[28px] px-[27px] py-[15px] h-[50px] items-center gap-[16px] text-[16px] font-semibold text-white;
+    }
+    .title-1 {
+        @apply text-[#3A7364] font-bold leading-[40px] text-[34px];
+    }
+    .title-2 {
+        @apply text-[#3A7364] font-bold leading-[24px] text-[20px];
+    }
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .box-role-item {
+        @apply w-[180px] h-[180px] flex-center bg-[#fff] rounded-[10px] cursor-pointer border-[#fff] border-[3px] hover:border-[#1EC28B] transition-all duration-300;
+    }
+    .input {
+        @apply h-[56px] bg-[#fff] rounded-[30px] border-[#fff] px-[20px] text-[16px] font-regular w-full text-[#333333];
+    }
+    .error {
+        @apply text-[#FF0000] text-[12px] font-regular;
+    }
+}
+
+@layer base {
+    #root {
+        @apply h-full;
+    }
+
+    html,
+    body {
+        @apply h-full;
+
+        @apply select-none;
+
+        @apply bg-transparent;
+
+        /* @apply font-semibold antialiased text-white; */
+
+        @apply overflow-hidden;
+        ::-webkit-scrollbar {
+            width: 0px; /* Width of the scrollbar */
+            height: 0px; /* Width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Background color of the track */
+            border-radius: 0px !important; /* Rounded corners for the track */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #51f0ba; /* Color of the scrollbar thumb */
+            border-radius: 0px !important; /* Rounded corners for the thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #696cff !important; /* Color of the thumb on hover */
+        }
+    }
+
+    header {
+        -webkit-app-region: drag;
+    }
+
+    button {
+        -webkit-app-region: no-drag;
+    }
+}
