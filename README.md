@@ -29,7 +29,11 @@ $ yarn build:linux
 
 
 # Auto updater
-### Note: update version in the `package.json` everytime if we have a new release.
+### Notes
+* Update version in the `package.json` everytime if we have a new release.
+* macOS application must be [signed](https://www.electron.build/code-signing) in order for auto updating to work.
+* Private GitHub provider only for very special cases — not intended and not suitable for all users.
+* The GitHub API currently has a rate limit of 5000 requests per user per hour. An update check uses up to 3 requests per check.
 ### 1. Setting github repository
 ```yml
 # Publish application
