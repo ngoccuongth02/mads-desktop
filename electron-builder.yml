@@ -40,7 +40,10 @@ linux:
 appImage:
     artifactName: ${name}-${version}.${ext}
 npmRebuild: false
-# publish:
-#     provider: github
-#     releaseType: release
-#     url: https://github.com/ngoccuongth02/mads-desktop
+
+# Publish application
+publish:
+  provider: github
+  owner: ngoccuongth02
+  repo: mads-desktop
+  releaseType: prerelease
