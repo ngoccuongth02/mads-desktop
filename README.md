@@ -29,6 +29,7 @@ $ yarn build:linux
 
 
 # Auto updater
+### Note: update version in the `package.json` everytime if we have a new release.
 ### 1. Setting github repository
 ```yml
 # Publish application
