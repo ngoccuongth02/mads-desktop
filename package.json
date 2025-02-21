@@ -1,6 +1,6 @@
 {
     "name": "mads-sat",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Ms Ánh Dạy SAT 1600",
     "license": "MIT",
     "main": "./out/main/index.js",
