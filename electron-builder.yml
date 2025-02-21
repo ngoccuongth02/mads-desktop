@@ -44,6 +44,6 @@ npmRebuild: false
 # Publish application
 publish:
   provider: github
-  owner: ngoccuongth02
+  owner: nguyenan1511
   repo: mads-desktop
   releaseType: release
