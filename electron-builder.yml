@@ -46,4 +46,4 @@ publish:
   provider: github
   owner: ngoccuongth02
   repo: mads-desktop
-  releaseType: prerelease
+  releaseType: release
