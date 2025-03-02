@@ -23,10 +23,17 @@ jobs:
         run: npm install
 
       - name: Package macOS app
-        run: npm run build:mac
+        run: npm run build:mac --universal --publish always
 
-      - name: Upload macOS artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: macOS-build
-          path: dist/*.dmg
+      # - name: Upload macOS artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: macOS-build
+      # #     path: dist/*.dmg
+      # - name: Package macOS app
+      #   run: npm run electron:build -- --mac --universal --publish always
+
+      - name: Upload macOS Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run build:mac --publish always
