@@ -1,5 +1,4 @@
 appId: com.example.nextron
-appBundleId: com.example.nextron
 productName: Mads-sat
 directories:
     buildResources: build
