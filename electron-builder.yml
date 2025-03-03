@@ -20,19 +20,27 @@ nsis:
     uninstallDisplayName: ${productName}
     createDesktopShortcut: always
 mac:
-    entitlementsInherit: build/entitlements.mac.plist
+    identity: Developer ID Application
+    hardenedRuntime: true
+    gatekeeperAssess: false
     extendInfo:
         - NSCameraUsageDescription: Application requests access to the device's camera.
         - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
         - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
         - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
-    notarize: false
+    entitlements: plist/entitlements.mac.plist
+    entitlementsInherit: plist/entitlements.mac.plist
+    notarize: true
     icon: 'resources/icon.icns'
-    # target:
-    #     - target: dmg
-    #       arch: 
-    #         - x64
-    #         - arm64
+    target:
+        - target: dmg
+          arch:
+            - x64
+            - arm64
+        - target: zip
+          arch:
+            - x64
+            - arm64
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
@@ -48,4 +56,7 @@ npmRebuild: false
 
 # Publish application
 publish:
-    provider: github
+    provider: github  # ✅ Use GitHub Releases for updates
+    repo: mads-desktop
+    owner: ngoccuongth02
+    releaseType: draft  # Change to 'release' when fully tested
