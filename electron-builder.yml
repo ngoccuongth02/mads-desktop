@@ -38,6 +38,7 @@ mac:
     type: distribution
     notarize:
       appBundleId: "com.example.nextron"  # Ensure this matches your actual app ID
+      teamId: "$(env.APPLE_TEAM_ID)"
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
