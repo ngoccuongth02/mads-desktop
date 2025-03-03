@@ -38,9 +38,6 @@ mac:
     type: distribution
     notarize:
       appBundleId: "com.example.nextron"  # Ensure this matches your actual app ID
-      appleId: "${env.APPLE_ID}"
-      appleIdPassword: "${env.APPLE_APP_SPECIFIC_PASSWORD}"
-
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
