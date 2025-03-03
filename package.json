@@ -1,6 +1,6 @@
 {
     "name": "mads-sat",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "Ms Ánh Dạy SAT 1600",
     "license": "MIT",
     "main": "./out/main/index.js",
@@ -16,7 +16,9 @@
         "postinstall": "electron-builder install-app-deps",
         "build:win": "npm run build && electron-builder --win --config",
         "build:mac": "electron-vite build && electron-builder --mac --config",
-        "build:linux": "electron-vite build && electron-builder --linux --config"
+        "build:linux": "electron-vite build && electron-builder --linux --config",
+        "build:mac:publish": "electron-vite build && electron-builder --mac --config --publish always",
+        "build:win:publish": "npm run build && electron-builder --win --config --publish always"
     },
     "dependencies": {
         "@electron-toolkit/preload": "^2.0.0",
