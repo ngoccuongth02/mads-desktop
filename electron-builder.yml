@@ -33,7 +33,7 @@ mac:
     icon: 'resources/icon.icns'
     target:
       target: "default"
-      "arch":
+      arch:
         - universal
     type: distribution
 dmg:
