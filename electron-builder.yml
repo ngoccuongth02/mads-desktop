@@ -32,6 +32,7 @@ mac:
     entitlementsInherit: plist/entitlements.mac.plist
     icon: 'resources/icon.icns'
     type: distribution
+    notarize: true
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
