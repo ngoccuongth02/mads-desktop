@@ -20,7 +20,7 @@ nsis:
     uninstallDisplayName: ${productName}
     createDesktopShortcut: always
 mac:
-    identity: ZL2Y4UA32J
+    identity: $APPLE_TEAM_ID
     hardenedRuntime: true
     gatekeeperAssess: false
     extendInfo:
@@ -30,12 +30,11 @@ mac:
         - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
     entitlements: plist/entitlements.mac.plist
     entitlementsInherit: plist/entitlements.mac.plist
-    notarize: true
+    notarize:
+      appBundleId: "com.example.nextron"
+      appleId: $APPLE_ID
+      appleIdPassword: $APPLE_ID_PASSWORD
     icon: 'resources/icon.icns'
-    # target:
-    #     - target: dmg
-    #       arch:
-    #         - universal
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
