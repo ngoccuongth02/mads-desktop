@@ -20,7 +20,7 @@ nsis:
     uninstallDisplayName: ${productName}
     createDesktopShortcut: always
 mac:
-    identity: "Developer ID Application: Du Nguyen Huynh (ZL2Y4UA32J)"
+    identity: "Du Nguyen Huynh (ZL2Y4UA32J)"
     hardenedRuntime: true
     gatekeeperAssess: false
     extendInfo:
