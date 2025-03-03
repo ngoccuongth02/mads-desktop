@@ -32,10 +32,10 @@ mac:
     entitlementsInherit: plist/entitlements.mac.plist
     notarize: true
     icon: 'resources/icon.icns'
-    target:
-        - target: dmg
-          arch:
-            - universal
+    # target:
+    #     - target: dmg
+    #       arch:
+    #         - universal
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
