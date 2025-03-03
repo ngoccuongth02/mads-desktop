@@ -33,6 +33,17 @@ jobs:
           security unlock-keychain -p "" build.keychain
           security import certificate.p12 -k build.keychain -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "" build.keychain
+      - name: Debug Environment Variables
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }} #Your Apple ID email
+          APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }} # App-specific password (not your Apple password)
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }} #Your Apple Developer Team ID
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }} # Password for the .p12 file
+        run: |
+          echo "APPLE_ID: $APPLE_ID"
+          echo "APPLE_ID_PASSWORD: $APPLE_ID_PASSWORD"
+          echo "APPLE_TEAM_ID: $APPLE_TEAM_ID"
+          echo "CSC_KEY_PASSWORD: $CSC_KEY_PASSWORD"
 
       - name: Package macOS app
         env:
