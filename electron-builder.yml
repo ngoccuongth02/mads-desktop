@@ -20,7 +20,7 @@ nsis:
     uninstallDisplayName: ${productName}
     createDesktopShortcut: always
 mac:
-    identity: ${APPLE_TEAM_ID}
+    identity: ZL2Y4UA32J
     hardenedRuntime: true
     gatekeeperAssess: false
     extendInfo:
