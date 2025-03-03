@@ -33,6 +33,9 @@ jobs:
           security unlock-keychain -p "" build.keychain
           security import certificate.p12 -k build.keychain -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "" build.keychain
+          
+      - name: Verify Installed Certificates
+        run: security find-identity -v
 
       - name: Package macOS app
         env:
