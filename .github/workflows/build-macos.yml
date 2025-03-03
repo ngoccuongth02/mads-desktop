@@ -40,7 +40,7 @@ jobs:
       - name: Package macOS app
         env:
           APPLE_ID: ${{ secrets.APPLE_ID }} #Your Apple ID email
-          APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }} # App-specific password (not your Apple password)
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }} # App-specific password (not your Apple password)
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }} #Your Apple Developer Team ID
           CSC_LINK: ${{ secrets.CSC_LINK }} # Base64 of the .p12 certificate
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }} # Password for the .p12 file
