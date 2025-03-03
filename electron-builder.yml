@@ -31,14 +31,7 @@ mac:
     entitlements: plist/entitlements.mac.plist
     entitlementsInherit: plist/entitlements.mac.plist
     icon: 'resources/icon.icns'
-    target:
-      target: "default"
-      arch:
-        - universal
     type: distribution
-    notarize:
-      appBundleId: "com.example.nextron"  # Ensure this matches your actual app ID
-      teamId: "$(env.APPLE_TEAM_ID)"
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
