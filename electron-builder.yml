@@ -32,7 +32,10 @@ mac:
     entitlementsInherit: plist/entitlements.mac.plist
     icon: 'resources/icon.icns'
     type: distribution
-    notarize: true
+    notarize:
+        teamId: "${env.APPLE_TEAM_ID}"
+        appleId: "${env.APPLE_ID}"
+        appleIdPassword: "${env.APPLE_APP_SPECIFIC_PASSWORD}"
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
