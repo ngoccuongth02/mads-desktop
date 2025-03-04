@@ -32,7 +32,7 @@ mac:
     entitlementsInherit: plist/entitlements.mac.plist
     icon: 'resources/icon.icns'
     type: distribution
-afterSign: "src/main/lib/notarize.ts"
+    afterSign: "src/main/lib/notarize.ts"
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
