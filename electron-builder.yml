@@ -32,7 +32,13 @@ mac:
     entitlementsInherit: plist/entitlements.mac.plist
     icon: 'resources/icon.icns'
     type: distribution
-    afterSign: "src/main/lib/notarize.ts"
+    # afterSign: "src/main/lib/notarize.ts"
+    notarize:
+      tool: "notarytool"
+      # appPath: `${appOutDir}/${appName}.app`
+      teamId: ${env.APPLE_TEAM_ID}
+      appleId: ${env.APPLE_ID}
+      appleIdPassword: ${env.APPLE_APP_SPECIFIC_PASSWORD}
 dmg:
     artifactName: ${name}-${version}.${ext}
 linux:
